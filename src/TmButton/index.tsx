@@ -3,6 +3,6 @@ import './index.less'
 import { TmButtonProps } from './tm-button'
 
 export default function TmButton (props: TmButtonProps) {
-  const { type } = props
-  return <button className={`tm-button ${type || ''}`}>hello</button>
+  const { type, children, className, htmlType } = props
+return <button {...props} className={`tm-button ${className} ${type || ''}`} type={htmlType}>{ children }</button>
 }
